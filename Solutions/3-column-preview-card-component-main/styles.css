@@ -1,0 +1,229 @@
+/* CSS Reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--lexend);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* ---------------- Styling for challenge ---------------- */
+:root {
+  /* Primary */
+  --orange-bg: hsl(31, 77%, 52%);
+  --dark-cyan-bg: hsl(184, 100%, 22%);
+  --very-dark-cyan-bg: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  --paragraph-color: hsla(0, 0%, 100%, 0.75);
+  --text-color: hsl(0, 0%, 95%);
+
+  /* Font family */
+  --lexend: "Lexend Deca", sans-serif;
+  --big-shoulders-display: "Big Shoulders Display", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+.container {
+  margin: 1.5em 0;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.sedan {
+  background-color: var(--orange-bg);
+}
+
+.sedan .card__button {
+  color: var(--orange-bg);
+}
+
+.suv {
+  background-color: var(--dark-cyan-bg);
+}
+
+.suv .card__button {
+  color: var(--dark-cyan-bg);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan-bg);
+}
+
+.luxury .card__button {
+  color: var(--very-dark-cyan-bg);
+}
+
+.card {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  max-width: 28em;
+  align-items: start;
+}
+
+.card__icon {
+  width: 5em;
+}
+
+.card__header {
+  font-family: var(--big-shoulders-display);
+  color: var(--text-color);
+  margin: 1em 0;
+  text-transform: uppercase;
+}
+
+.card__content {
+  font-family: var(--lexend);
+  color: var(--paragraph-color);
+  margin-bottom: 1.5em;
+}
+
+.card__button {
+  border: 2px solid var(--text-color);
+  border-radius: 30px;
+  padding: 0.8em 2em;
+  font-family: var(--lexend);
+  background-color: var(--text-color);
+  margin-top: auto;
+}
+
+.sedan .card__button:hover {
+  background-color: var(--orange-bg);
+  border: 2px solid var(--text-color);
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.suv .card__button:hover {
+  background-color: var(--dark-cyan-bg);
+  border: 2px solid var(--text-color);
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.luxury .card__button:hover {
+  background-color: var(--very-dark-cyan-bg);
+  border: 2px solid var(--text-color);
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.card__button:active {
+  filter: brightness(70%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 62em) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 75%;
+  }
+
+  .card__content {
+    margin-bottom: 4em;
+  }
+}
