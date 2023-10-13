@@ -44,6 +44,7 @@ Users should be able to:
 
 - More practice with mobile-first responsiveness
 - Hover and active button styles
+- Using flexbox layout and `margin-top: auto` on the button to ensure it sits at the bottom of the card, regardless of text length.
 
 ### Useful resources
 
