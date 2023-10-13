@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/tsh22/stats-preview-card)
-- [Live Site URL](https://tsh22.github.io/stats-preview-card/)
+- [Solution URL](https://github.com/tsh22/FE-Mentor-Challenges/tree/main/Solutions/stats-preview-card-component-main)
+- [Live Site URL](https://tsh22.github.io/FE-Mentor-Challenges/Solutions/stats-preview-card-component-main/)
 
 ## My process
 
